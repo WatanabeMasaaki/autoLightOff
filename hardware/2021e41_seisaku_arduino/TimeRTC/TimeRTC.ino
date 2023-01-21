@@ -17,8 +17,8 @@ int sensorPin = 0;
 int servoPin = 3;
 int buttonPin = 12;
 
-int hourSet = 1;
-int minSet = 12;
+int hourSet = 0;
+int minSet = 0;
 
 void setup()
 {
