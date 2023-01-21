@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isMain = true;
+    @ObservedObject var notifycationModel = NotifycationModel()
+    
+    init(){
+        notifycationModel.askNotifycationPermit()
+    }
     
     var body: some View {
         NavigationView(content: {

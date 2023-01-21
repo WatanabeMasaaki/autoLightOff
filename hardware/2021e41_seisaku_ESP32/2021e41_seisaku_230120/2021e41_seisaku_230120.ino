@@ -70,8 +70,7 @@ class CharacteristicCallbacks : public BLECharacteristicCallbacks
     {
       String ledState = value.c_str();
 //      Serial.println(ledState);
-      pNotifyCharacteristic->setValue(ledState);
-      pNotifyCharacteristic->notify();
+      
 
       long timeGet = ledState.toInt();
 
@@ -81,6 +80,14 @@ class CharacteristicCallbacks : public BLECharacteristicCallbacks
     }
   }
 };
+
+//スマホに送信
+void sendMessage() {
+  char error = '1';
+  Serial.println(error);
+  pNotifyCharacteristic->setValue(error);
+  pNotifyCharacteristic->notify();
+}
 
 // BLE loop
 void loopBLE()
@@ -101,7 +108,8 @@ void loopBLE()
     while(Serial1.available() > 0){
       int val = Serial1.read();
       if(val == 49){
-        //スマホに通知  
+        //スマホに通知
+        sendMessage();  
       }
     }  
   }

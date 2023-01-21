@@ -9,6 +9,7 @@ import SwiftUI
 import CoreBluetooth
 
 class BLEModel: NSObject, ObservableObject {
+    @ObservedObject var notifycationModel = NotifycationModel()
     @Published var logText = ""
     @Published var connectStateLabel = "接続状態：未接続"
     @Published var isDisabledConnectButton = true
@@ -64,6 +65,17 @@ class BLEModel: NSObject, ObservableObject {
             centralManager.cancelPeripheralConnection(peripheral)
         }
     }
+    
+//    func sendNotificationRequest(){
+//        let content = UNMutableNotificationContent()
+//        content.title = "電気が消えませんでした"
+//        content.body = "部屋の電気を消してください"
+//
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 0, repeats: false)
+//        let request = UNNotificationRequest(identifier: "通知No.1", content: content, trigger: trigger)
+//        UNUserNotificationCenter.current().add(request)
+//    }
+
 }
 // CBCentralManagerDelegate
 extension BLEModel: CBCentralManagerDelegate {
@@ -197,7 +209,12 @@ extension BLEModel: CBPeripheralDelegate{
                 logText.append("unknown: ")
             }
             logText.append("\(receivedData ?? "breaked data") \n")
-            isWriteState = receivedData == "0" ? false : true
+//            isWriteState = receivedData == "0" ? false : true
+            if receivedData == "1" {
+                print("recieved\n")
+                notifycationModel.makeNotifycation()
+            }
         }
     }
 }
+

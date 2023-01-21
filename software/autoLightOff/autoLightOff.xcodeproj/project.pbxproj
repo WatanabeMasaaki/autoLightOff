@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B87978AE297C266700B2D0F1 /* NotifycationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B87978AD297C266700B2D0F1 /* NotifycationModel.swift */; };
 		B89E7B902954105200CFB38A /* autoLightOffApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E7B8F2954105200CFB38A /* autoLightOffApp.swift */; };
 		B89E7B922954105200CFB38A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89E7B912954105200CFB38A /* ContentView.swift */; };
 		B89E7B942954105300CFB38A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B89E7B932954105300CFB38A /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B87978AD297C266700B2D0F1 /* NotifycationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifycationModel.swift; sourceTree = "<group>"; };
 		B89E7B8C2954105200CFB38A /* autoLightOff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoLightOff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B89E7B8F2954105200CFB38A /* autoLightOffApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autoLightOffApp.swift; sourceTree = "<group>"; };
 		B89E7B912954105200CFB38A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +41,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B87978AF297C267500B2D0F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B89E7B912954105200CFB38A /* ContentView.swift */,
+				B89E7B9D2954135F00CFB38A /* MainView.swift */,
+				B89E7B9F2954136A00CFB38A /* SettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B87978B0297C268100B2D0F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B8AB7FEF296FBF080086522C /* BLEModel.swift */,
+				B87978AD297C266700B2D0F1 /* NotifycationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B89E7B832954105200CFB38A = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +79,12 @@
 		B89E7B8E2954105200CFB38A /* autoLightOff */ = {
 			isa = PBXGroup;
 			children = (
-				B8AB7FF1296FC3740086522C /* Info.plist */,
 				B89E7B8F2954105200CFB38A /* autoLightOffApp.swift */,
-				B89E7B912954105200CFB38A /* ContentView.swift */,
+				B87978B0297C268100B2D0F1 /* Model */,
+				B87978AF297C267500B2D0F1 /* View */,
+				B8AB7FF1296FC3740086522C /* Info.plist */,
 				B89E7B932954105300CFB38A /* Assets.xcassets */,
 				B89E7B952954105300CFB38A /* Preview Content */,
-				B89E7B9D2954135F00CFB38A /* MainView.swift */,
-				B89E7B9F2954136A00CFB38A /* SettingView.swift */,
-				B8AB7FEF296FBF080086522C /* BLEModel.swift */,
 			);
 			path = autoLightOff;
 			sourceTree = "<group>";
@@ -150,6 +169,7 @@
 			files = (
 				B89E7B922954105200CFB38A /* ContentView.swift in Sources */,
 				B8AB7FF0296FBF080086522C /* BLEModel.swift in Sources */,
+				B87978AE297C266700B2D0F1 /* NotifycationModel.swift in Sources */,
 				B89E7BA02954136A00CFB38A /* SettingView.swift in Sources */,
 				B89E7B9E2954135F00CFB38A /* MainView.swift in Sources */,
 				B89E7B902954105200CFB38A /* autoLightOffApp.swift in Sources */,
