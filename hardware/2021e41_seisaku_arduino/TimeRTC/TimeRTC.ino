@@ -57,6 +57,7 @@ void loop()
       if(valB > 10){
         Serial.print("電気が消えませんでした");
         //スマホに通知
+        Serial1.print(1);
       }
     }
   }

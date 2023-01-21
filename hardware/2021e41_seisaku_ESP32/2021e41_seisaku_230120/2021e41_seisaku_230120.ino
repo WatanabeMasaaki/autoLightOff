@@ -97,6 +97,14 @@ void loopBLE()
   {
     oldDeviceConnected = deviceConnected;
   }
+  if(Serial1.available() > 0){
+    while(Serial1.available() > 0){
+      int val = Serial1.read();
+      if(val == 49){
+        //スマホに通知  
+      }
+    }  
+  }
 }
 
 void setup()
