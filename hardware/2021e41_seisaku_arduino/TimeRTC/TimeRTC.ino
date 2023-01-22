@@ -149,9 +149,9 @@ void printDigits(int digits)
 }
 
 void toggleLight(){
-  myservo.write(180);
-  delay(1000);
   myservo.write(0);
+  delay(1000);
+  myservo.write(180);
 }
 
 int checkBrightness(){
