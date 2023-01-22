@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isMain = true;
-    @ObservedObject var notifycationModel = NotifycationModel()
+    @ObservedObject var notificationModel = NotificationModel()
     
     init(){
-        notifycationModel.askNotifycationPermit()
+        notificationModel.askNotificationPermit()
     }
     
     var body: some View {

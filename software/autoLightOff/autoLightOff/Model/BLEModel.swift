@@ -9,7 +9,7 @@ import SwiftUI
 import CoreBluetooth
 
 class BLEModel: NSObject, ObservableObject {
-    @ObservedObject var notifycationModel = NotifycationModel()
+    @ObservedObject var notificationModel = NotificationModel()
     @Published var logText = ""
     @Published var connectStateLabel = "接続状態：未接続"
     @Published var isDisabledConnectButton = true
@@ -212,7 +212,7 @@ extension BLEModel: CBPeripheralDelegate{
 //            isWriteState = receivedData == "0" ? false : true
             if receivedData == "1" {
                 print("recieved\n")
-                notifycationModel.makeNotifycation()
+                notificationModel.makeNotification()
             }
         }
     }
